@@ -64,11 +64,11 @@
     });
 
     // CSS合并 图片base64编码 压缩 添加版本号
-    var base64 = true
-    gulp.task("cssConcat", () => {
+    var onOffBase64 = true;
+     gulp.task("cssConcat", () => {
         return gulp.src([`${urlConfig.css.src}/base.css`, `${urlConfig.css.src}/main2.css`, `${urlConfig.css.src}/public.css`])
             .pipe(concat('index.css'))
-            .pipe(gulpif(base64,base64({
+            .pipe(gulpif(onOffBase64,base64({
                 maxImageSize: 500 // bytes 
                 // debug: true
             })))

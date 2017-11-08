@@ -1,24 +1,24 @@
 
 因为需要的依赖包很大，建议用yarn进行依赖包下载，用npm经常中途会卡死:
 
-#yarn安装：
+# yarn安装：
 `npm install yarn`
 
-#用yarn 安装依赖包：
+# 用yarn 安装依赖包：
 `yarn install`
 
 
-#生产环境：
+# 生产环境：
 `gulp build`
 
-#开发环境:
+# 开发环境:
 `gulp dev`
 
-#测试环境:
+# 测试环境:
 `gulp` 
 
 
-#包含功能： 
+# 包含功能： 
 sass 注入;
 css 合并，自动添加版本号
 js 合并，自动添加版本号
