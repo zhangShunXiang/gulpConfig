@@ -1,0 +1,186 @@
+/*** 视频样式 ***/
+@import "main";
+.cl{clear: both;}
+.mt20{margin-top: 20px;}
+.vode_list a:hover .mask{visibility:visible !important;}
+.vode_tile{
+  width:100%;
+  height:50px;
+  background: #fff;
+  border-top:1px solid #eeeeee;
+  margin-bottom: 1px;
+  .list{
+    width:1200px;
+    margin: 0 auto;
+    li.active{
+      a{
+        color:#b17e47;
+        height:50px; ;
+        border-bottom:1px solid #b17e47;
+      }
+    }
+    li{
+      float: left;
+      margin-right: 30px;
+      a{
+        display: block;
+        line-height: 50px;
+        font-size:14px;
+        color:#666666;
+      }
+      a:hover{
+        color:#b17e47;
+      }
+    }
+  }
+}
+.play{
+  width:100%;
+  background: #f6f6f6;
+  padding:20px 0;
+}
+.vode_content{
+  width:1200px;
+  background:#fff;
+  margin:0 auto;
+  min-height: 443px;
+  .vode_wz{
+    font-size:24px;
+    color:#333;
+    height: 50px;
+    line-height: 80px;
+    padding-left:30px;
+  }
+  .vode_list{
+    height: auto;
+    overflow:hidden;
+  }
+  .vode_list li{
+    width:360px;
+    height: 333px;
+    float: left;
+    margin:30px 0 0 30px;
+    a{
+      display: block;
+      width:360px;
+      height: 240px;
+      *width:360px;
+      *height:240px;
+      position: relative;
+      display: table;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        *width:360px;
+        *height:240px;
+        position: absolute;
+        top:0px;
+        left:0px;
+      }
+      .text{
+        text-align: center;
+        font-size: 26px;
+        display: table-cell;
+        vertical-align:middle;
+        position: relative;
+        z-index: 10;
+        color: #fff;
+        word-break: break-all;
+        -webkit-word-break:break-all;
+        -moz-word-break:break-all;
+      }
+      .mask{
+        visibility:hidden;
+        width: 360px;
+        height: 240px;
+        background: url("/images/v2/mask_by.png") repeat;
+        position: absolute;
+        top:0px;
+        left:0px;
+        i{
+          display: block;
+          width:52px;
+          height: 52px;
+          margin:98px auto 0;
+          background: url("/images/icons/ICON-sys.png") -219px -30px no-repeat;
+        }
+      }
+    }
+
+
+    .vode_describe{
+      width:328px;
+      height:82px;
+      border:1px solid #eee;
+      border-top:none;
+      padding:10px 15px 0 15px;
+      .text{
+        font-size: 16px;
+        color:#333;
+        line-height: 35px;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        overflow:hidden;
+        height: 35px;
+        width: 328px;
+        a.titl{
+          height: 35px !important;
+          width: 328px !important;
+          overflow:hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+        }
+      }
+      .name{
+        font-size: 14px;
+        color:#999;
+        height: 30px;
+        line-height: 30px;
+        .speaker{
+          width: 185px;
+          height: 30px;
+          text-overflow:ellipsis;
+          white-space:nowrap;
+          overflow:hidden;
+          float:left;
+          font-size: 14px;
+        }
+        .time{
+          float: right;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+;}
+
+.i-private-learn-11,.i-private-learn-22,.i-private-learn-33,.i-private-learn-44{
+  @extend %icon-sys; width:22px; height:22px; margin-right:10px;
+}
+.i-private-learn-11{ background-position:-111px -420px;}
+.i-private-learn-22{ background-position:-131px -420px;}
+.i-private-learn-33{ background-position:-153px -420px;}
+.i-private-learn-44{ background-position:-175px -420px;}
+
+.i-private-learn-11,.i-private-learn-12,.i-private-learn-13,.i-private-learn-14{
+  @extend %icon-sys; width:22px; height:22px; margin-right:10px;
+}
+.i-private-learn-11{ background-position:-111px -420px;}
+.i-private-learn-12{ background-position:-131px -420px;}
+.i-private-learn-13{ background-position:-153px -420px;}
+.i-private-learn-14{ background-position:-175px -420px;}
+
+.vode_content .vode_list{
+  .vode-none{
+    width: 1200px;
+    height: 550px;
+    padding-top: 95px;
+    background: #fff;
+    img{
+      margin:0 auto;
+    }
+  }
+}
+@import "patch";

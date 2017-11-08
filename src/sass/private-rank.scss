@@ -1,0 +1,272 @@
+/*** 私募榜单样式 ***/
+@import "main";
+.text-333{color:$text-333;}
+.text-999{color:$text-999;}
+.link-color{color:$link-color;}
+.on .i-rank-arrow{@extend %icon-sys; width:11px; height:6px; background-position:-137px -479px;}
+.i-prize-cup span{@extend %icon-sys; width:24px; height:22px; background-position:0 -479px;}
+.i-prize-cup-s{@extend %icon-sys; width:18px; height:16px; background-position:-59px -479px; vertical-align:-2px; margin-right:5px;}
+.i-private-intro{@extend %icon-sys; width:16px; height:19px; margin-right:10px; background-position:-25px -479px;}
+.i-private-recommed{@extend %icon-sys; width:16px; height:20px; margin-right:10px; background-position:-42px -479px;}
+
+table{border-collapse: collapse;}
+.rank-banner{
+  width:100%;
+  height:450px;
+
+  background:url("../images/banner/banner6.png") no-repeat center top;
+}
+
+.rank-body{
+  background:$page-bg-c;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+.rank-body-wrap{
+  width:$main-page-w;
+  @extend %center;
+  height:auto;
+  overflow:hidden;
+  background:#fff;
+}
+.rank-month-tit{
+  height:auto;
+  overflow:hidden;
+  border-bottom:1px solid $link-color;
+  li{
+    float:left;
+    height:60px;
+    line-height:60px;
+    cursor:pointer;
+    padding:0 38px;
+    font-size:20px;
+    color:$link-color;
+  }
+  .on{
+    color:#fff;
+    background:$link-color;
+  }
+}
+.rank-table{
+  padding:60px;
+  .rank-table-box{
+    display:none;
+    h3{
+      width:360px;
+      height:60px;
+      line-height:60px;
+      @extend %center;
+      color:$link-color;
+      font-size:30px;
+      font-weight:normal;
+      text-align:center;
+      background:url("../images/v2/rank-title.png") no-repeat;
+    }
+  }
+  .mt35{
+    margin-top:35px;
+  }
+  .mt50{
+    margin-top:50px;
+  }
+  .rank-text{
+    p{color:$text-333; line-height:24px; text-indent:2em;}
+  }
+  .rank-item-box{
+    margin-top:40px;
+    .rank-item-tit{
+      padding-bottom:6px;
+      height:auto;
+      overflow:hidden;
+      li{
+        position:relative;
+        float:left;
+        margin-right:20px;
+        height:34px;
+        line-height:34px;
+        padding:0 12px;
+        color:$link-color;
+        cursor:pointer;
+        border:1px solid #e7d8c7;
+      }
+      .on{
+        background:$link-color;
+        border:1px solid $link-color;
+        color:#fff;
+      }
+      .i-rank-arrow{
+        position:absolute;
+        left:50%;
+        bottom:-6px;
+        margin-left:-6px;
+      }
+    }
+    .r-item-table{
+      margin-top:26px;
+      .r-item-table-in{
+        display:none;
+      }
+      table{
+        border:1px solid #e6e6e6;
+        text-align:center;
+      }
+      tr{
+        height:60px;
+      }
+      th,td,p{font-family:'Microsoft Yahei';}
+      th{
+        color:$text-333;
+        font-weight:normal;
+        p{
+          color:$text-999;
+        }
+      }
+      .gray{
+        background:#f6f6f6;
+      }
+      .i-prize-cup{
+        width:42px;
+        height:42px;
+        @extend %center;
+        cursor:pointer;
+        @include borderRadius(24px);
+        @include transition(background 0.5s);
+        &:hover{
+          background:#f3ece5;
+          @include borderRadius(24px);
+        }
+        span{
+          @extend %center;
+          margin-top:10px;
+        }
+      }
+
+    }
+  }
+}
+.rank-infos-wrap{
+  padding:40px 60px 0;
+  overflow:hidden;
+  dl{
+    height:auto;
+    overflow:hidden;
+    margin-bottom:40px;
+    dt,dd{ float:left;}
+    dt{ width:192px;}
+    dd{
+      a{
+        margin-right:50px;
+        color:$link-color;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+}
+
+
+/*榜单弹窗*/
+.alert-rank{
+  width:660px;
+  height:520px;
+  background:url("../images/v2/rank-alert.png") no-repeat;
+  .alert-rank-body{
+    padding:140px 90px 0;
+    .title{
+      margin-bottom:48px;
+      color:#d74f2b;
+      font-size:24px;
+      font-weight:normal;
+      text-align:center;
+    }
+    .texts{
+      margin-bottom:8px;
+      text-align:center;
+      span{color:#f19529;}
+    }
+    .p1-fz{
+      font-size:15px;
+    }
+    .rank-slide{
+      margin-top:52px;
+      .tit{
+        position:relative;
+        font-size:12px;
+        text-align:center;
+        span{
+          position:relative;
+          z-index:1;
+          padding:0 10px;
+          background:#fff;
+        }
+        .h-line{
+          position:absolute;
+          left:0;
+          top:10px;
+          width:480px;
+          height:1px;
+          border-top:1px solid #eee;
+        }
+      }
+      .slidebox{
+        position:relative;
+      }
+      .slideWrap{
+        width:428px;
+        height:76px;
+        margin:12px auto 0;
+        overflow:hidden;
+      }
+      ul{
+        position:relative;
+      }
+      li{
+        float:left;
+        margin:0 9px;
+        width:176px;
+        height:66px;
+        padding:10px 0 0 20px;
+        background:#fbf6f1;
+        b{
+          display:block;
+          padding-bottom:8px;
+          font-weight:normal;
+          color:$link-color;
+          font-size:18px;
+          span{}
+        }
+        p{
+          color:$text-999;
+        }
+      }
+      .prev-btn,.next-btn{
+        position:absolute;
+        @extend %icon-sys;
+        width:14px;
+        height:23px;
+      }
+      .prev-btn{
+        left:0;
+        top:25px;
+        background-position:-107px -479px;
+        &:hover{
+          background-position:-78px -479px;
+        }
+      }
+      .next-btn{
+        right:0;
+        top:25px;
+        background-position:-122px -479px;
+        &:hover{
+          background-position:-92px -479px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@import "patch";

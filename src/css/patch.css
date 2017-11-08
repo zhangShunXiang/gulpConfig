@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/*** 侯补样式文件 ***/
+.fz16 {
+  font-size: 16px; }
+
+.fz18 {
+  font-size: 18px; }
+
+.fz20 {
+  font-size: 20px; }
+
+.fz24 {
+  font-size: 24px; }
+
+.fz28 {
+  font-size: 28px; }
+
+.mrg-t20 {
+  margin-top: 20px; }
+
+.mrg-b0 {
+  margin-bottom: 0 !important; }
+
+.mrg-b10 {
+  margin-bottom: 10px !important; }
+
+.mrg-b15 {
+  margin-bottom: 15px; }
+
+.mrg-b20 {
+  margin-bottom: 20px; }
+
+.mrg-b30 {
+  margin-bottom: 30px; }
+
+.mrg-b40 {
+  margin-bottom: 40px; }
+
+.mrg-r0 {
+  margin-right: 0; }
+
+.mrg-r7 {
+  margin-right: 7px; }
+
+.pdg-t54 {
+  padding-top: 54px; }
+
+.dp-block {
+  display: block !important; }
+
+.dp-none {
+  display: none !important; }
+
+.ovv {
+  overflow: visible; }
+
+.p-r {
+  position: relative; }
+
+.p-a {
+  position: absolute; }
+
+.f-l {
+  float: left; }
+
+.f-r {
+  float: right; }
+
+.tac {
+  text-align: center !important; }
+
+.tal {
+  text-align: left !important; }
+
+.tar {
+  text-align: right !important; }
+
+.wrap-placeholder {
+  *left: 0; }

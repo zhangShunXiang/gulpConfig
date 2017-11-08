@@ -1,0 +1,394 @@
+/*** 私募学堂样式 ***/
+@import "main";
+.i-arrow-down{@extend %icon-sys; width:20px; height:20px; background-position:-180px -363px}
+.i-arrow-up{@extend %icon-sys; width:20px; height:20px; background-position:-180px -383px}
+.i-tab-arrow{@extend %icon-sys; width:12px; height:6px; background-position:-220px -363px;}
+.i-video-tips{@extend %icon-sys; width:18px; height:18px; margin-right:2px; background-position:-201px -363px; vertical-align:-3px;}
+
+.learning-body-top{
+  width:100%;
+  background:#fff;
+  border-top:1px solid #eee;
+}
+.learning-body-top-wrap{
+  width:$main-page-w;
+  @extend %center;
+  padding:52px 0;
+  ul{
+    height:auto;
+    overflow:hidden;
+    margin-left:-20px;
+    li{
+      float:left;
+      margin-left:19px;
+    }
+  }
+}
+.learning-body{
+  padding:15px 0 20px;
+  background:$page-bg-c;
+}
+.learning-body-wrap{
+  width:$main-page-w;
+  @extend %center;
+  height:auto;
+  overflow:hidden;
+  .learning-l{
+    $width:285px;
+    width:$width;
+    background:#fff;
+  }
+  .learning-r{
+    $width:900px;
+    width:$width;
+    background:#fff;
+  }
+  .line-style{
+    width:4px;
+    height:14px;
+    margin-right:14px;
+    background:#b17e47;
+    overflow:hidden;
+    display:inline-block;
+  }
+}
+
+/*左侧栏*/
+.learning-l-column{
+  dl{
+    margin-top:-1px;
+  }
+  dt{
+    position:relative;
+    padding-left:30px;
+    height:49px;
+    line-height:49px;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    font-size:18px;
+    color:$text-333;
+    cursor:pointer;
+    .active{
+      color:$def-link-color;
+    }
+    i{
+      position:absolute;
+      top:14px;
+      right:12px;
+    }
+  }
+  .border-top-none{
+    border-top:0;
+  }
+  .border-bottom-none{
+    border-bottom:0;
+  }
+  .border-bottom{
+    border-bottom:1px solid #eee;
+  }
+  dd{
+    display:none;
+    padding:15px 0 15px 30px;
+    a{
+      display:block;
+      padding:10px 0;
+      color:$text-333;
+      &:hover{
+        color:$def-link-color;
+      }
+    }
+    .on{
+      color:$def-link-color;
+      .dian{
+        background:#b17e47;
+      }
+    }
+    .dian{
+      @extend %dib;
+      width:4px;
+      height:4px;
+      margin-right: 13px;
+      vertical-align: 3px;
+      background:#afafaf;
+    }
+
+  }
+  .current {
+    dd{display:block !important;}
+  }
+
+}
+
+/*右侧内容*/
+.learning-r-content{
+  padding-top:30px;
+  padding-bottom:40px;
+  .learning-con-tit{
+    @extend %icon-sys; width:167px; height:44px; margin-left:-10px; background-position:-180px -317px;
+    font-weight:normal;
+    p{
+      text-align:center;
+      line-height:34px;
+      color:#fff;
+      font-size:20px;
+    }
+  }
+  .learning-tab-tit{
+    padding:0 5px;
+    margin-top:10px;
+    height:64px;
+    line-height:64px;
+    border-bottom:1px solid #eee;
+    li{ position:relative; float:left;}
+    a{
+      display:block;
+      margin:0 25px;
+      color:$text-333;
+      font-size:16px;
+
+    }
+    .active,a:hover{
+      color:$def-link-color;
+    }
+    .i-tab-arrow{
+      position:absolute;
+      left:50%;
+      margin-left:-6px;
+      bottom:-1px;
+    }
+  }
+}
+/*私募学堂*/
+.learning-question-list{
+  padding:0 30px;
+  h4{
+    padding:25px 0 20px;
+    font-size:16px;
+    color:$text-333;
+    font-weight:normal;
+  }
+  .texts{
+    padding:20px 65px 20px 20px;
+    background:#f8f8f8;
+    h4,p{
+      background:none !important;
+    }
+    p{
+      line-height:26px; color:$text-999;
+      a{
+        color:#999 !important;
+        background:none !important;
+      }
+    }
+    .text-indent{text-indent:2em;}
+  }
+}
+
+/*漫画学堂*/
+
+.learning-cartoon-list,.learning-video-list{
+  $width:270px;
+  $height:180px;
+  padding: 0 30px;
+  height:auto;
+  overflow:hidden;
+  ul{
+    margin-left:-15px;
+    height:auto;
+    overflow:hidden;
+  }
+  li{
+    float:left;
+    width:$width;
+    margin-left:15px;
+    margin-top:30px;
+    cursor:pointer;
+    @include transition(all .5s);
+    img{
+      width:$width;
+      height:$height;
+    }
+    .cartoon-tit{
+      height:59px;
+      line-height:59px;
+      padding:0 15px;
+      border:1px solid #eee;
+      border-top:none;
+      font-size:16px;
+      @extend %ellipsis;
+    }
+    &:hover{
+      .cartoon-tit{color:$link-color;}
+    }
+  }
+}
+/*视频学堂*/
+.learning-video-list{
+  $width:270px;
+  $height:180px;
+  li{
+    a{
+      display:block;
+      position:relative;
+      &:hover .video-mask{
+        @include opacity(1);
+        *display:block;
+      }
+    }
+    img{
+      width:$width;
+      height:$height;
+    }
+    .video-mask{
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:$height;
+      background:rgba(0,0,0,0.5);
+      @include opacity(0);
+      @include transition(all .5s);
+      *display:none;
+      .i-video{
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-24px;
+        margin-top:-24px;
+      }
+    }
+    a{
+      width:100%;
+      @extend %ellipsis;
+    }
+  }
+  .no-video-data{
+    width:100%;
+    p{
+      width:458px;
+      height:358px;
+      margin-top:100px;
+      margin-bottom:100px;
+      @extend %center;
+      background:url("../images/v2/vode_none_tu.jpg") no-repeat;
+    }
+  }
+
+
+
+
+}
+
+
+/*漫画详情页*/
+.private-position{
+  span{
+    color:$text-333;
+  }
+}
+.learning-det-tit{
+  font-size:26px;
+  color:#333;
+  font-weight:normal;
+}
+.learning-detail-l{
+  $width:895px;
+  width: $width - 120;
+  padding:35px 60px 40px;
+  background:#fff;
+  .cartoon-detail-img{
+    margin-top:35px;
+    img{
+      width:775px;
+    }
+  }
+}
+.learning-detail-r{
+  width:285px;
+  .learning-detail-r-wrap{
+    background:#fff;
+  }
+  h3{
+    height:49px;
+    padding:0 20px;
+    line-height:49px;
+    border-bottom:1px solid #EEE;
+    font-size:18px;
+    font-weight:normal;
+    color:$text-333;
+  }
+  ul{
+    padding:0 20px;
+  }
+  li{
+    padding:13px 0;
+    border-bottom:1px dashed #ddd;
+    a{
+      line-height:18px;
+    }
+    .date{
+      margin-top:10px;
+      color:$text-999;
+      font-size:12px;
+    }
+  }
+  .border-bottom-none{
+    border-bottom:0;
+  }
+}
+
+/*视频详情页*/
+.video-detail-l{
+  background:#fff;
+  padding:30px 30px 30px;
+
+  .video-detail-box{
+    margin-top:30px;
+    .video-box{ width:1140px; height:640px;}
+    .video-infos{
+      margin-top:20px;
+      ul{
+        float:left;
+        width:885px;
+        padding-top:15px;
+        padding-bottom:10px;
+        border-right:1px dashed #ddd;
+      }
+      li{
+        height:auto;
+        overflow:hidden;
+        padding:12px 0;
+        font-size:16px;
+        color:$text-333;
+        span{
+          font-size:16px;
+        }
+        a{
+          margin-right:10px;
+          color:$def-link-color;
+        }
+        div{line-height:21px;}
+      }
+      .label-t{
+        color:$text-999;
+        font-size:16px;
+        margin-right:5px;
+      }
+    }
+  }
+}
+
+.learning-appcode{
+  float:left;
+  width:180px;
+  margin-left:62px;
+  margin-top:-5px;
+  text-align:center;
+  p{ margin-bottom:5px; color:$text-333; font-family:'Microsoft Yahei';}
+  img{margin:0 auto}
+  .p-last{
+    color:$text-999;
+  }
+}
+
+@import "patch";

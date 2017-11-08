@@ -1,0 +1,403 @@
+/*** 实名认证 ***/
+
+@import "main";
+$text-color-3:#333;
+$text-color-9:#999;
+$text-color-c:#ccc;
+$login-link-color:#b17e47;
+$font-weight:normal;
+$border-color:#e6e6e6;
+.fz18 {
+    font-size: 18px;
+}
+
+.fz20 {
+    font-size: 20px;
+}
+
+.fz24 {
+    font-size: 24px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.codegray {
+    cursor: default;
+}
+
+
+/*统一设置placeholder样式*/
+
+::-webkit-input-placeholder {
+    color: $text-color-c;
+}
+
+:-moz-placeholder {
+    color: $text-color-c;
+}
+
+::-moz-placeholder {
+    color: $text-color-c;
+}
+
+:-ms-input-placeholder {
+    color: $text-color-c;
+}
+
+input,
+select,
+* {
+    outline: none;
+}
+
+.header-main{
+    border-bottom:1px solid #e6e6e6;
+}
+.footer-s{
+    border-top:1px solid #e6e6e6;
+}
+/*实名认证*/
+
+.authen-body {
+    background: $page-bg-c;
+    padding:15px 0;
+}
+
+.authen-container {
+    height: 780px;
+    width: $main-page-w;
+    overflow: hidden;
+    @extend %center;
+    background: #fff;
+}
+
+.authen-container-content {
+    padding: 43px 0 43px 0;
+    text-align: center;
+    .authen-bottom {
+        padding: 50px 110px;
+        height: auto;
+        overflow: hidden;
+        .info {
+            padding-bottom: 52px;
+            font-size: 14px;
+            color: $text-color-9;
+        }
+        #authenForm {
+            padding-left: 278px;
+        }
+        .input-group {
+            height: auto;
+            overflow: hidden;
+            padding-bottom:30px;
+            position:relative;
+            .inputbox {
+                width: 386px;
+                height: 48px;
+                line-height: 48px;
+                padding: 0 16px;
+                float: left;
+                border: 1px solid $border-color;
+                font-size: 16px;
+            }
+            .error-mes {
+                /*@extend %dib;*/
+                float: left;
+                margin-left: 15px;
+                margin-top: 15px;
+                height: 20px;
+                color: #fd6040;
+                font-size: 12px;
+                label {
+                    display: none;
+                    line-height: 14px;
+                }
+            }
+            .checkbox,
+            .checked {
+                @extend %icon-sys;
+                width: 17px;
+                height: 17px;
+                margin-top: 2px;
+                margin-right: 0;
+                cursor: pointer;
+            }
+            .checkbox {
+                background-position: -153px -167px;
+            }
+            .checked {
+                background-position: -153px -150px;
+            }
+            .texts {
+                margin-left: 10px;
+                width: 386px;
+                text-align: left;
+                color: $text-color-9;
+                p {
+                    color: $text-color-3;
+                    padding-bottom: 7px;
+                }
+            }
+        }
+        .user-btn-long {
+            width: 420px;
+            height: 50px;
+            margin-top: 60px;
+            line-height: 50px;
+            float: left;
+
+            &.btn-disable{
+                @extend .btn-disable;
+            }
+        }
+    }
+}
+
+.user-btn-long {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: $def-link-color;
+    border: none;
+    cursor: pointer;
+}
+
+//step
+.steps {
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    li {
+        float: left;
+        font-size: 24px;
+    }
+    .on {
+        color: $def-link-color;
+    }
+    .i-p-num,
+    .i-p-num-gray {
+        margin-right: 12px;
+        text-align: center;
+        line-height: 32px;
+        color: #fff;
+        font-size: 18px;
+        vertical-align: 1px;
+    }
+    .line {
+        width: 62px;
+        height: 1px;
+        margin: 16px 10px 0;
+        background: #999;
+        overflow: hidden;
+    }
+}
+
+//风险测评
+.radio,
+.radiochecked,
+.checkbox,
+.checked {
+    @extend %icon-sys;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: -4px;
+}
+
+.radio {
+    background-position: -153px -204px;
+}
+
+.radiochecked {
+    background-position: -153px -184px;
+}
+
+.checkbox {
+    background-position: -153px -244px;
+}
+
+.checked {
+    background-position: -153px -224px;
+}
+
+.risk-body {
+    width: 1088px;
+    overflow: hidden;
+    @extend %center;
+}
+
+.risk-body-container {
+    padding: 43px 0 0;
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+    p {
+        font-size: 16px;
+    }
+    .risktips {
+        padding: 25px 0 26px;
+        font-size: 16px;
+        color: $text-color-9;
+    }
+    .userinfo {
+        color: $text-color-3;
+        text-align: left;
+    }
+    .title {
+        margin-top: 28px;
+        padding-left: 10px;
+        font-size: 16px;
+        color: $text-color-3;
+        text-align: left;
+        border-left: 6px solid $def-link-color;
+    }
+    .base-texts {
+        height: auto;
+        overflow: hidden;
+        margin-top: 5px;
+        p {
+            float: left;
+            margin-right: 55px;
+            color: $text-color-3;
+        }
+    }
+    .test-item {
+        margin-top: 42px;
+        text-align: left;
+        border: 1px solid $border-color;
+        h4 {
+            padding: 14px 21px 14px 30px;
+            font-size: 16px;
+            color: $text-color-3;
+            background: #e6e6e6;
+            font-weight: $font-weight;
+        }
+        ul {
+            padding: 28px;
+            li {
+                height: auto;
+                overflow: hidden;
+                margin-bottom: 20px;
+                p {
+                    float: left;
+                    margin-right: 50px;
+                }
+                .tit-text {
+                    width: 98px;
+                    margin-right: 75px;
+                }
+            }
+            .mb0 {
+                margin-bottom: 0
+            }
+            .mt14 {
+                margin-top: 14px;
+            }
+            .clearboth {
+                clear: both !important;
+            }
+        }
+    }
+    .risktest-content .title {
+        margin-top: 40px;
+    }
+    .agree,
+    .qm {
+        font-size: 16px;
+        color: $text-color-3;
+    }
+    .agree {
+        padding: 35px 0 45px;
+        text-align: left;
+    }
+    .qm {
+        text-align: right;
+    }
+    .user-btn-long {
+        width: 359px;
+        height: 54px;
+        margin-top: 78px;
+        line-height: 54px;
+        font-size: 16px;
+
+        &.btn-disable{
+            @extend .btn-disable;
+        }
+    }
+    .mz-sm {
+        padding: 78px 0;
+        b {
+            font-size: 20px;
+            color: $text-color-3;
+            font-weight: $font-weight;
+        }
+        p {
+            margin-top: 15px;
+            font-size: 16px;
+            color: $text-color-9;
+        }
+    }
+    .r-error {
+        color: #fd6040
+    }
+}
+
+.risk-container-result {
+    width:$main-page-w;
+    @extend %center;
+    padding: 120px 0 170px;
+    height: auto;
+    overflow: hidden;
+    .result-text{
+        margin-bottom:112px;
+        text-align:center;
+        .tp{
+            font-size:20px;
+            color:$text-999;
+            margin-bottom:30px;
+        }
+        p{
+            color:$text-333;
+        }
+    }
+    .risk-typebox{
+        width:409px;
+        height:219px;
+        margin:0 auto 40px;
+        background:url("../images/v2/risk-result.png") no-repeat;
+
+        .tit{
+            padding:45px 0 5px;
+            font-size:72px;
+            color:$link-color;
+        }
+
+    }
+
+    .btn-group {
+        a {
+            @extend %dib;
+            width: 218px;
+            height: 52px;
+            line-height: 52px;
+            border: 1px solid #b17e47;
+            text-align: center;
+            font-size: 16px;
+            color: $def-link-color;
+            cursor:pointer;
+        }
+        .btn2 {
+            margin-left: 56px;
+            color: #fff;
+            background: $def-link-color;
+        }
+    }
+}
+
+@import "patch";

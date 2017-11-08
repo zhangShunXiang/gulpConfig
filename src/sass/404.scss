@@ -1,0 +1,83 @@
+/***  错  ***/
+
+@import "main";
+$text-color-6:#666;
+$text-color-9:#999;
+$a-link-color:#c8a66b;
+.error-body {    
+    background: $page-bg-c; 
+}     
+  .abc{color: #fff} 
+.error-body-container {
+    width: $main-page-w;
+    @extend %center;
+    height: auto;
+    overflow: hidden;
+    text-align: center; 
+    .contents {
+        padding: 209px 0 240px;
+        width:700px;
+        height: auto;
+        overflow: hidden;
+        margin: 0 auto;
+        *display: inline; 
+        *zoom: 1; 
+        .img404,
+        .img500 {
+            float: left;
+            width: 356px;
+            height: 228px;
+        }
+        .img404 {
+            background: url("../images/404.png") no-repeat;
+        }
+        .img500 {
+            background: url("../images/500.png") no-repeat;
+        }
+        .error-text {
+            float: left;
+            width:334px;
+            height: 188px;
+            padding-top: 40px;
+            padding-left: 10px;
+            text-align: left;
+            h4 {
+                padding-bottom: 14px;
+                font-size: 24px;
+                color: $text-color-6;
+                font-weight: normal;
+            }
+            .texts {
+                height: auto;
+                overflow: hidden;
+                padding-bottom: 16px;
+                color: $text-color-9;
+                span,
+                p {
+                    display: inline-block;
+                    float: left;
+                    line-height: 30px;
+                }
+            }
+            a {
+                display: inline-block;
+                width: 88px;
+                height: 30px;
+                margin-right: 6px;
+                line-height: 30px;
+                border: 1px solid $a-link-color;
+                color: $a-link-color;
+                text-align: center;
+            }
+        }
+        .error500-text {
+            height: 160px;
+            padding-top: 40px;
+            .texts {
+                padding-bottom: 26px;
+            }
+        }
+    }
+}
+
+@import "patch";

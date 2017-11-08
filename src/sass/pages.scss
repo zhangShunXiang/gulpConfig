@@ -1,0 +1,1231 @@
+/*** 页面样式 ***/
+@import "main";
+@import "vode";
+
+/* 私募首页 */ 
+.private-products-pick{
+  height:360px;
+  margin-bottom:20px;
+   ul{
+    margin-left:-20px;
+  }
+}
+.private-products-pick-item{
+  width:225px;
+  height:300px;
+  background:#FFF;
+  margin-left:20px;
+  float:left;
+  padding:30px;
+
+  &:hover{
+    box-shadow:0 0 20px rgba(0, 0, 0, .1);
+  }
+
+  h3{
+    font-size:20px; 
+    font-weight:normal;
+    color:#333;
+    height:40px;
+    line-height:40px;
+    @extend %textEllipsis;
+  }
+
+  .btn-default2{
+    height:38px;
+    line-height:38px;
+    width:223px;
+  }
+}
+.private-products-pick-label{
+  text-align:center;
+  margin-bottom:20px;
+
+  span{
+    @extend %dib;
+    height:28px;
+    line-height:28px;
+    padding:0 8px;
+    border:1px solid #F5E8DA;
+    color:#B17E47;
+  }
+}
+.private-products-pick-info{
+  color:#999;
+  line-height:36px;
+  height:36px;
+  margin-bottom:30px;
+  @extend %textEllipsis;
+}
+.private-products-pick-card{
+  margin-bottom:45px;
+  overflow:hidden;
+
+  dl{
+    width:112px;
+    float:left;
+    height:60px;
+  }
+  dt,dd{
+    height:30px;
+    line-height:30px;
+    @extend %textEllipsis;
+  }
+  dt{
+    font-size:20px;
+    color:#333;
+
+    &.active{
+      color:$def-link-color;
+    }
+  }
+  dd{
+    color:#999;
+  }
+}
+
+.private-main-images{
+  margin-bottom:20px;
+
+  ul{
+    margin-left:-20px;
+    overflow:hidden;
+  }
+
+  li{
+    $width:285px;
+    $height:160px;
+    width:$width;
+    height:$height;
+    margin-left:20px;
+    float:left;
+
+    img{
+      width:$width;
+      height:$height;
+    }
+  }
+}
+
+.private-index-news{
+  padding:30px;
+  background:#FFF;
+  margin-bottom:50px;
+  overflow:hidden;
+}
+.private-index-news-l,.private-index-news-r{
+  height:420px;
+  float:left;
+}
+.private-index-news-l{
+  width:540px;
+  margin-right:15px;
+
+  li{
+    position:relative;
+    height:120px;
+    margin-bottom:30px;
+    padding-left:236px;
+    overflow:hidden;
+
+    img{
+      position:absolute;
+      width:210px;
+      height:120px;
+      top:0;
+      left:0;
+    }
+    h6{
+      color:#333;
+      font-size:18px;
+      height:35px;
+      line-height:35px;
+      padding:10px 0;
+      font-weight:normal;
+      @extend %textEllipsis;
+    }
+    p{
+      height:52px;
+      line-height:30px;
+      color:#999;
+      overflow:hidden;
+      @include webkitBoxLine(2);
+    }
+  }
+}
+.private-index-news-r{
+  width:550px;
+  padding-left:30px;
+  border-left:1px solid #eee;
+
+  i{
+    @extend %dib;
+    width:6px;
+    height:6px;
+    @include borderRadius(3px);
+    vertical-align:middle;
+    background:#C5A37D;
+    margin-right:8px;
+  }
+
+  li{
+    $height:47px;
+    height:$height;
+    position:relative;
+
+    h6{
+      width:450px;
+      font-size:16px;
+      color:#999;
+      @extend %textEllipsis;
+      height:$height;
+      line-height:$height;
+      font-weight:normal;
+
+      a{
+        width:460px;
+        color:#666;
+      }
+    }
+
+    p{
+      @extend %dib;
+      width:110px;
+      line-height:$height;
+      position:absolute;
+      right:0;
+      top:0;
+      color:#999;
+      overflow:hidden;
+      text-align:right;
+    }
+  }
+}
+
+.private-index-col-news{
+  padding:30px;
+  background:#FFF;
+  margin-bottom:50px;
+  overflow:hidden;
+
+  .section-li-title{
+    height:30px;
+    line-height:30px;
+    padding:20px;
+    color:#333;
+    position:relative;
+
+    h3{ font-size:20px; font-weight:normal; }
+
+    .more{
+      @extend %dib;
+      position:absolute;
+      top:21px;
+      right:20px;
+      padding:0 10px;
+      height:28px;
+      line-height:28px;
+      color:#c3a17d;
+      font-size:14px;
+      border:1px solid #f5e8db;
+      @include borderRadius(15px);
+    }
+  }
+
+  ul{
+    margin-left:-30px;
+  }
+
+  li{
+    width:360px;
+    margin-left:30px;
+    background:#FFFAF5;
+    float:left;
+    height:337px;
+
+    .container{
+      border-top:1px solid #F6E6D4;
+      padding:20px 30px;
+      height:266px;
+    }
+    .a-item{
+      display:block;
+      height:45px;
+      line-height:45px;
+      font-size:16px;
+      @extend %textEllipsis;
+      color:#333;
+
+      i{
+        @extend %dib;
+        width:4px;
+        height:4px;
+        background:#AFAFAF;
+        margin-right:12px;
+        vertical-align:middle;
+      }
+    }
+  }
+}
+
+/* 私募列表 */
+.private-products-condition{
+  background:#FFF;
+  padding:20px;
+  margin-bottom:20px;
+
+  .search-container{
+    height:32px;
+    padding-bottom:20px;
+  }
+
+  .input-group{
+    overflow:hidden;
+    input{
+      height:20px;
+      line-height:20px;
+      padding:5px 15px;
+      width:212px;
+      border:1px solid $link-color;
+      vertical-align:middle;
+      float:left;
+      outline:none;
+    }
+    .btn-search{
+      width:33px;
+      height:32px;
+      vertical-align:middle;
+      background:$link-color;
+      float:left;
+
+      i{
+        @extend %icon-sys;
+        width:33px;
+        height:32px;
+        background-position:0 -442px;
+      }
+    }
+  }
+
+  .tag-container{
+    @extend %dib;
+    margin-right:25px;
+
+    span{
+      @extend %dib;
+      height:30px;
+      line-height:30px;
+      padding:0 12px;
+      color:$link-color;
+      border:1px solid #E7D8C6;
+      margin-right:10px;
+      display:none;
+
+      &.active{
+        @extend %dib;
+      }
+
+      i{
+        @extend %icon-sys;
+        width:20px;
+        height:20px;
+        cursor:pointer;
+        margin-left:5px;
+        background-position:-33px -442px;
+      }
+    }
+  }
+
+  .conditions{
+    border-top:1px dashed #eee;
+    border-bottom:1px dashed #eee;
+    padding:10px 0;
+
+    dl{
+      font-size:0;
+    }
+    dt,dd{
+      @extend %dib;
+      height:45px;
+      line-height:45px;
+      font-size:14px;
+    }
+    dt{
+      width:115px;
+      color:#999;
+      text-indent:10px;
+    }
+    dd{
+      margin-right:45px;
+      cursor:pointer;
+      font-size:14px;
+
+      &.active, &:hover{
+        color:$link-color;
+      }
+    }
+  }
+
+  .condition-ready{
+    padding-top:20px;
+    height:32px;
+  }
+
+  .title{
+    color:#999;
+    width:115px;
+    text-indent:10px;
+    float:left;
+    height:32px;
+    line-height:32px;
+  }
+
+  .container{
+    padding-left:115px;
+  }
+
+  .summary{
+    @extend %dib;
+
+    b{
+      padding:0 3px;
+      color:$link-color;
+    }
+  }
+
+  .btn-reset{
+    @extend %dib;
+    margin-left:20px;
+    padding-left:20px;
+    border-left:1px solid #eee;
+    color:$link-color;
+  }
+}
+
+
+.private-products-list{
+  background:#FFF;
+  margin-bottom:10px;
+  padding:0 20px;
+}
+.private-products-list-table{
+  table{ table-layout:fixed; }
+
+  th,td{
+    border-bottom:1px solid #eee;
+    padding:20px 0;
+    height:30px;
+    @extend %textEllipsis;
+    font-size:14px;
+    text-align:center;
+
+    .important,b{
+      font-weight:normal;
+      color:$link-color;
+    }
+  }
+  th{
+    color:#333;
+
+    a{
+      display:block;
+
+      i{
+        @extend %icon-sys;
+        width:10px;
+        height:14px;
+        background-position:-80px -400px;
+      }
+
+      &.order-asc{
+        i{ background-position:-50px -400px; }
+      }
+
+      &.order-desc{
+        i{ background-position:-60px -400px; }
+      }
+    }
+  }
+  td{
+    .btn-appointment{
+      @extend %dib;
+      width:74px;
+      height:30px;
+      line-height:30px;
+      text-align:center;
+      color:#FFF;
+      background:$link-color;
+      font-size:12px;
+
+      a{
+        font-weight:normal;
+        color:$link-color;
+      }
+
+      &.disable{
+        background:#CCC;
+        cursor:not-allowed;
+      }
+    }
+  }
+}
+
+
+/* 私募详情 */
+.private-products-detail{
+
+  .detail-section{
+    background:#FFF;
+    padding:20px 30px;
+    margin-bottom:15px;
+    color:#666;
+    line-height:30px;
+
+    p{
+      line-height:30px;
+    }
+
+    .private-org:last-child{
+      border-bottom:0;
+    }
+  }
+
+  .detail-video{
+    height:470px;
+  }
+
+  .detail-section-title{
+    border-bottom:1px solid #eee;
+    height:30px;
+    line-height:30px;
+    padding-bottom:12px;
+    color:$link-color;
+    font-size:18px;
+  }
+
+  .private-name{
+    margin-bottom:15px;
+    line-height:45px;
+
+    .icon-orange{
+      @extend %dib;
+      height:24px;
+      line-height:24px;
+      padding:0 5px;
+      margin-right:5px;
+      color:#FFF;
+      background:#FF8649;
+      vertical-align:middle;
+      @include borderRadius(2px);
+    }
+    .btn-view-special{ margin-top:3px; }
+  }
+
+  h1{
+    @extend %dib;
+    vertical-align:middle;
+    font-size:24px;
+    color:#333;
+    font-weight:normal;
+    margin-right:10px;
+  }
+
+  .detail-card{
+    margin-bottom:10px;
+    .li-01{ width:256px; }
+    .li-02{ width:300px; }
+    .li-03{ width:260px; }
+
+    dl{
+      float:left;
+    }
+
+    dt{
+      color:#999;
+      height:35px;
+      line-height:35px;
+      @extend %textEllipsis;
+    }
+
+    dd{
+      font-size:18px;
+      color:#666;
+
+      span,b{
+        font-size:28px;
+        font-weight:normal;
+      }
+      b{ color:$link-color; }
+    }
+  }
+
+  .private-intro{
+    padding:10px 0;
+    dl{
+      position:relative;
+    }
+    dt{
+      width:80px;
+      height:30px;
+      color:#999;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+    dd{
+      padding-left:85px;
+    }
+  }
+
+  .container{
+    padding-top:20px;
+
+    p{ margin-bottom:10px;}
+  }
+
+  .attachment{
+    padding-top:15px;
+
+    ul{ overflow:hidden;}
+    li{
+      width:50%;
+      height:50px;
+      line-height:50px;
+      @extend %textEllipsis;
+      float:left;
+    }
+
+    a{
+      color:#5B8AD0;
+
+      &:hover{
+        text-decoration:underline;
+      }
+    }
+  }
+
+  .detail-table{
+    margin:20px 0;
+
+    th{
+      color:#999;
+      text-indent:20px;
+    }
+    th,td{
+      padding:10px 0;
+      line-height:24px;
+    }
+    tr{
+      &:nth-of-type(odd){
+        th,td{
+          background:#F7F7F7;
+        }
+      }
+    }
+  }
+}
+.private-org{
+  padding:30px 0 20px;
+  position:relative;
+  border-bottom:1px solid #F3F3F3;
+
+  img{
+    width:98px;
+    height:98px;
+    border:1px solid #eee;
+    float:left;
+  }
+
+  h3{ color:#333; margin-bottom:10px; font-size:18px; font-weight:normal;}
+}
+.private-org-content{
+  padding-left:134px;
+}
+.private-statement{
+  line-height:22px;
+  color:#999;
+}
+
+.private-aside-appointment{
+  padding:30px 20px 20px;
+  background:#FFF;
+  margin-bottom:15px;
+
+  .form-li{
+    margin-bottom:10px;
+    position:relative;
+
+    .error-mes{
+      line-height:20px;
+      margin-top:3px;
+      color:#FD6040;
+      font-size:12px;
+      text-align:left;
+    }
+  }
+
+  .input-text{
+    width:230px;
+    height:18px;
+    padding:10px;
+    border:1px solid #E6E6E6;
+    background:#F8F8F8;
+
+    &[disabled]{
+      color:#CBCBCB;
+    }
+  }
+  .input-submit,.input-disable{
+    width:252px;
+    display:block;
+    height:38px;
+    line-height:38px;
+    background:$link-color;
+    border:none;
+    text-align:center;
+    cursor:pointer;
+    outline:none;
+    color:#FFF;
+  }
+  .input-disable{
+    background:#CBCBCB;
+    color:#FFF;
+    cursor:not-allowed;
+  }
+
+  .container{
+    font-size:12px;
+    line-height:20px;
+    color:#999;
+
+    b{
+      display:block;
+      color:#333;
+      text-align:center;
+      font-size:16px;
+      padding:10px;
+      font-weight:normal;
+    }
+  }
+}
+.private-aside-feature{
+  img{
+    width:100%;
+  }
+}
+
+.private-aside-learn{
+  background:#FFF;
+
+  .container{
+    ul{
+      margin-left:-1px;
+      overflow:hidden;
+      font-size:0;
+    }
+    li{
+      @extend %dib;
+      border-bottom:1px dashed #eee;
+      border-left:1px dashed #eee;
+      margin-left:-1px;
+      width:144px;
+      height:80px;
+      line-height:80px;
+      float:left;
+
+      a{
+        display:block;
+        padding-left:20px;
+        font-size:16px;
+      }
+    }
+    li:nth-child(3){
+      border-bottom:none;
+    }
+    li:last-child{
+      border-bottom:none;
+    }
+  }
+}
+
+.private-float-appoint{
+  background:#FFF;
+  @include boxShadow(0 -5px 30px rgba(0, 0, 0, .05));
+  padding-top:24px;
+  height:60px;
+  position:fixed;
+  bottom:-90px;
+  left:0;
+  width:100%;
+
+  &.active{
+    bottom:0;
+  }
+}
+.private-float-appoint-wrap{
+  width:100%;
+  position:relative;
+
+  .float-close{
+    @extend %icon-sys;
+    width:20px;
+    height:20px;
+    background-position:-80px -207px;
+    position:absolute;
+    top:10px;
+    right:30px;
+    cursor:pointer;
+    @include transform(none);
+    @include transition(all .5s);
+
+    &:hover{
+      @include transform(rotate(-180deg));
+      @include transition(all .5s);
+    }
+  }
+}
+.private-float-appoint-tel{
+  width:397px;
+  font-size:16px;
+  color:$link-color;
+  height:64px;
+  line-height:38px;
+  float:left;
+
+  .i-appoint-tel{
+    @extend %icon-sys;
+    width:16px;
+    height:16px;
+    background-position:-100px -207px;
+    margin-right:6px;
+  }
+
+  b{ font-size:30px; font-weight:normal; vertical-align:-3px; }
+
+}
+.private-float-appoint-form{
+  width:458px;
+  height:50px;
+  float:left;
+
+  .form-li{
+    position:relative;
+    @extend %dib;
+    vertical-align:top;
+
+    .error-mes{
+      line-height:20px;
+      margin-top:3px;
+      color:#FD6040;
+      font-size:12px;
+      text-align:left;
+    }
+  }
+
+  .wrap-placeholder{
+    color:#FFF!important;
+  }
+
+  .input-text{
+    width:150px;
+    padding:8px 10px;
+    height:20px;
+    border:1px solid #E6E6E6;
+    background:#F6F6F6;
+    color:#666;
+    margin-right:4px;
+    outline:none;
+  }
+  .input-submit,.input-disable{
+    width:80px;
+    height:36px;
+    border:none;
+    background:$link-color;
+    color:#FFF;
+    text-align:center;
+    outline:none;
+  }
+  .input-disable{
+    background:#CBCBCB;
+    cursor:not-allowed;
+  }
+}
+.private-float-appoint-info{
+  height:44px;
+  line-height:22px;
+  color:#999;
+  font-size:12px;
+}
+
+
+
+/* 私募学院 */
+.private-learn-title{
+  @extend %dib;
+  padding-left:30px;
+  padding-right:20px;
+  height:46px;
+  line-height:46px;
+  color:#FFF;
+  font-size:22px;
+  position:absolute;
+  left:0;
+  top:21px;
+  background:#C7A56E;
+
+  i{
+    width:0;
+    height:0;
+    position:absolute;
+    top:0;
+    right:-20px;
+    border-width:23px 0 23px 20px;
+    border-color:transparent transparent transparent #C7A56E;
+    border-style:solid;
+  }
+}
+.private-learn-section{
+  position:relative;
+  margin-bottom:20px;
+  padding:83px 30px 20px;
+  background:#FFF;
+
+  dl{
+    margin-bottom:10px;
+
+    &.active{
+      i{ background-position:-136px -150px; }
+
+      dd{ display:block;}
+    }
+  }
+  dt{
+    height:45px;
+    line-height:45px;
+    margin-bottom:10px;
+    font-size:16px;
+    position:relative;
+    cursor:pointer;
+
+    i{
+      @extend %icon-sys;
+      width:15px;
+      height:8px;
+      background-position:-136px -158px;
+      position:absolute;
+      top:15px;
+      right:0;
+    }
+  }
+  dd{
+    background:#F5F5F5;
+    color:#333;
+    line-height:30px;
+    padding:20px 30px;
+    display:none;
+  }
+}
+
+/* 投研资讯 */
+.header-menu-top{
+  border-top:1px solid #eee !important;
+}
+.invest-aside-menu{
+  margin-bottom:15px;
+  background:#FFF;
+  text-align:center;
+
+  a{
+    display: inline-block;
+    width:141px;
+    height:80px;
+    line-height: 80px;
+    text-align:center;
+    font-size:16px;
+    color:#000;
+    border-right:1px dashed #eee;
+    border-bottom:1px dashed #eee;
+  }
+  .li-02{border-right: none;}
+  .li-03{border-bottom: none;}
+  .li-04{border-right: none;border-bottom: none;}
+}
+.new-recommended{
+  height: 50px;
+  line-height: 75px;
+  background: #fff;
+  margin-bottom: 0px;
+  padding-left:30px;
+}
+.invest-aside-news-list{
+  background:#FFF;
+  margin-bottom:15px;
+
+  ul{
+    padding:15px;
+  }
+
+  li{
+    height:40px;
+    line-height:40px;
+    @extend %textEllipsis;
+
+    i{
+      margin-right:10px;
+      font-style:normal;
+      font-size: 14px;
+      color:#b17e47;
+      font-weight: bold;
+    }
+  }
+}
+.invest-news-list-bbadd li:last-child{border-bottom:1px dashed #eee !important;}
+.invest-news-list{
+  padding:0 30px;
+  background:#FFF;
+  li{
+    padding:40px 0 40px 240px;
+    position:relative;
+    height:122px;
+    border-bottom:1px dashed #EEE;
+
+    &:last-child{
+      border-bottom:none;
+    }
+
+    img{
+      width:210px;
+      height:120px;
+      border:1px solid #EEE;
+      position:absolute;
+      top:40px;
+      left:0;
+    }
+
+    h4{
+      font-size:18px;
+      color:#333;
+      height:40px;
+      line-height:30px;
+      @extend %textEllipsis;
+    }
+
+    p{
+      padding:5px 0;
+      line-height:25px;
+      height:51px;
+      color:#999;
+      font-size:14px;
+      overflow:hidden;
+      @include webkitBoxLine(3);
+      word-break: break-all;
+    }
+
+    time{
+      display:block;
+      color:#999;
+      height:28px;
+      line-height:28px;
+    }
+  }
+}
+
+.invest-news-list-load{
+  background:#FFF;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+
+  a{
+    color:#B38F47;
+
+    &:hover{ color:#F6B348;}
+  }
+}
+
+.tyzx-details{
+  padding-top: 15px;
+}
+.mt40{margin-top: 40px;}
+
+/* 文章内容显示 */
+.news-detail-nav{
+  height:25px;
+  line-height:25px;
+  @extend %textEllipsis;
+  color:#999;
+  margin-bottom:15px !important;
+
+  a{ color:#999;}
+}
+.news-detail{
+  padding:60px;
+  background:#FFF;
+  margin-bottom:25px;
+
+  h1{
+    font-size:30px;
+    color:#333;
+    line-height:50px;
+    margin-bottom:10px;
+    word-break: break-all;
+  }
+
+  .news-origin{
+    height:30px;
+    line-height:30px;
+    color:#999;
+    padding-bottom:20px;
+
+    time{
+      @extend %dib;
+      margin-right:20px;
+    }
+  }
+
+  img{
+    max-width:100%;
+    display:inline;
+  }
+
+  blockquote{
+    border-left:5px solid #E8E8E8;
+    background:#F8F8F8;
+    padding:10px 20px;
+    line-height:36px;
+    color:#999;
+    font-size:16px;
+    margin:15px 0;
+    word-break: break-all;
+  }
+
+  p{
+    margin-bottom:10px;
+    color:#666;
+    line-height:36px;
+    font-size:16px;
+    word-break: break-all;
+    -webkit-word-break: break-all;
+    -moz-word-break: break-all;
+  }
+}
+.news-jumps{
+  height:30px;
+  line-height:30px;
+
+  li{
+    width:40%;
+    height:30px;
+    @extend %textEllipsis;
+    color:#999;
+
+    a{
+      color:#666;
+
+      &:hover{ color:$link-color;}
+    }
+  }
+}
+
+/* 关于我们 */
+.about-body{
+  background:$page-bg-c;
+}
+.about-body-wrap{
+  width:$main-page-w;
+  @extend %center;
+  position:relative;
+  z-index:8;
+  background:#FFF;
+  top:-50px;
+}
+.about-container{
+  padding:50px 100px;
+
+  p{
+    font-size:18px;
+    color:#666;
+    line-height:48px;
+    padding:35px 0;
+    text-align:center;
+  }
+}
+.about-logo{
+  width:180px;
+  height:60px;
+  margin:0 auto 20px;
+  padding-right:29px;
+}
+.about-tips{
+  color:#CCC;
+  text-align:center;
+  height:50px;
+  line-height:50px;
+}
+.about-barcode-container{
+  text-align:center;
+
+  ul{
+    @extend %dib;
+  }
+
+  li{
+    @extend %dib;
+
+    img{
+      width:130px;
+      height:130px;
+    }
+    h6{
+      color:#CCC;
+      font-weight:normal;
+      height:22px;
+      line-height:22px;
+    }
+  }
+}
+
+
+/* 服务协议 */
+.agreement-container{
+  background:#DDDDE0;
+  color:#333;
+  padding:20px 0;
+
+  section{
+    width:648px; height:988px; padding:75px; margin:0 auto 20px; background:#FFF; line-height:22px; font-size:16px; overflow:hidden;
+
+    h1{
+      line-height:22px;
+      font-size:20px;
+      padding:20px 0 40px;
+      text-align:center;
+    }
+    p{
+      line-height:32px;
+      font-size:16px;
+    }
+    h3{
+      font-size:18px;
+      line-height:36px;
+      text-align:center;
+      padding:10px 0;
+    }
+  }
+}
+
+/* 投资攻略--热点排行*/
+.hot-list{
+  border-left:none;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #eee;
+  margin-bottom:0px;
+  background: #fff;
+  padding-left:18px;
+  h3{
+    font-size: 18px;
+    color:#333;
+  }
+}
+@import "patch";

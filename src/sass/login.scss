@@ -1,0 +1,371 @@
+/*** 登录 ***/
+
+@import "main";
+$text-color-3:#333;
+$text-color-9:#999;
+$login-link-color:#b17e47;
+$font-weight:normal;
+$border-color:#e6e6e6;
+.fz18 {
+    font-size: 18px;
+}
+ 
+.fz20 {
+    font-size: 20px;
+}
+
+.fz24 {
+    font-size: 24px;
+}
+
+.mt10 {
+    margin-top: 10px;
+} 
+
+.codegray {
+    cursor: default;
+}
+
+
+input,
+select,
+* {
+    outline: none;
+}
+
+.header-main{
+    border-bottom:1px solid #e6e6e6;
+}
+.footer-s{
+    border-top:1px solid #e6e6e6;
+}
+
+/*登录*/
+
+.login-cover-body {
+    height: 740px;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.login-contanier {
+    width: $main-page-w;
+    padding-top: 80px;
+    @extend %center;
+    overflow: hidden;
+}
+
+.login-container-body {
+    width: 459px;
+    .tit {
+        height: 75px;
+        line-height: 75px;
+        background: url('../images/login-tag.png') no-repeat;
+        @extend %center;
+        color: $text-color-3;
+        font-weight: $font-weight;
+    }
+    .login-container-content {
+        height: auto;
+        min-height: 418px;
+        overflow: hidden;
+        padding: 57px 50px 30px;
+        background: #fff;
+        .input-group {
+            height: auto;
+            overflow: hidden;
+            position:relative;
+            .inputbox {
+                width: 100%;
+                height: 51px;
+                line-height: 51px;
+                border: none;
+                border-bottom: 1px solid $border-color;
+                font-size: 16px;
+            }
+            .inputbox-w236 {
+                width: 236px;
+            }
+            .error-mes {
+                height: 20px;
+                line-height: 20px;
+                margin-top: 3px;
+                color: #fd6040;
+                font-size: 12px;
+            }
+        }
+        .errortips {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fd6040;
+        }
+        .user-btn {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            margin-top: 10px;
+            border: none;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            background: $link-color;
+
+            &.btn-disable{
+                @extend .btn-disable;
+            }
+        }
+        .bot {
+            padding-top: 30px;
+            a {
+                padding-bottom: 0px;
+                color: $link-color;
+                font-size: 14px;
+            }
+        }
+    }
+    /*注册*/
+    .reg-container-content {
+        padding-top: 0;
+        .input-group {
+            .imgcodebox {
+                position: relative;
+                top: 11px;
+                @extend %dib;
+                height: auto;
+                overflow: hidden;
+                cursor: pointer;
+                img {
+                    width: 100px;
+                    height: 38px;
+                }
+                .get-imgcode {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                &:hover .get-imgcode {
+                    display: block;
+                }
+            }
+            .get-mobilecode {
+                @extend %dib;
+                width: 98px;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                border: 1px solid $link-color;
+                color: $link-color;
+                vertical-align: 3px;
+
+                &.btn-disable{
+                  background:none;
+                  color:#D0D0D0;
+                  border:1px solid #D0D0D0;
+                }
+            }
+            .label {
+                color: $text-color-3;
+                a {
+                    color: $link-color;
+                }
+            }
+        }
+        .bot {
+            p {
+                text-align: center;
+            }
+            a{
+                font-size:14px;
+            }
+        }
+    }
+}
+
+
+/*注册成功*/
+
+.register-success-body {
+    width: $main-page-w;
+    @extend %center;
+    overflow: hidden;
+}
+
+.register-success-container {
+    padding: 134px 300px;
+    text-align: center;
+    h3.title {
+        font-size: 28px;
+        line-height: 80px;
+        color: $link-color;
+        padding-bottom: 30px;
+        font-weight: $font-weight;
+        .i-r-success {
+            margin-right: 28px;
+        }
+    }
+    .info {
+        font-size: 18px;
+        color: $def-link-color;
+        padding-bottom: 78px;
+    }
+    .counts {
+        color: $text-color-9;
+    }
+    .user-btn-long {
+        display: block;
+        width: 359px;
+        height: 50px;
+        margin: 40px auto 0;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        font-size: 16px;
+        background: $link-color;
+    }
+}
+
+
+/*找回密码*/
+
+.password-body {
+    background: $page-bg-c;
+}
+
+.password-container {
+    height: 690px;
+    width: $main-page-w;
+    overflow: hidden;
+    @extend %center;
+    background: #fff;
+}
+
+.password-container-content {
+    padding: 43px 0 43px 0;
+    text-align: center;
+    .steps {
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        li {
+            float: left;
+            font-size: 24px;
+            // font-weight: 700;
+        }
+        .on {
+            color: $def-link-color;
+        }
+        .i-p-num,
+        .i-p-num-gray {
+            margin-right: 12px;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            font-size: 18px;
+            vertical-align: 1px;
+        }
+        .line {
+            width: 62px;
+            height: 1px;
+            margin: 16px 10px 0;
+            background: #999;
+            overflow: hidden;
+        }
+    }
+    .pwd-bottom {
+        padding-top: 106px;
+        padding-left: 392px;
+        .input-group {
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 26px;
+            position:relative;
+            .inputbox {
+                width: 386px;
+                height: 48px;
+                line-height: 48px;
+                padding: 0 16px;
+                float: left;
+                border: 1px solid $border-color;
+                font-size: 16px;
+            }
+            .inputbox-w278 {
+                width: 246px;
+            }
+            .hasmobile {
+                height: 48px;
+                padding-left: 16px;
+                font-size: 16px;
+                text-align: left;
+                color: $text-color-3;
+            }
+            .getpassword-mobilecode {
+                @extend %dib;
+                float: left;
+                width: 120px;
+                height: 48px;
+                margin-left: 16px;
+                text-align: center;
+                line-height: 48px;
+                color: #fff;
+                font-size: 16px;
+                background: $def-link-color;
+            }
+            .error-mes {
+                /*@extend %dib;*/
+                float: left;
+                margin-left: 15px;
+                margin-top: 15px;
+                height: 20px;
+                color: #fd6040;
+                font-size: 12px;
+                label {
+                    display: none;
+                    line-height: 14px;
+                }
+            }
+        }
+        .user-btn-long {
+            width: 420px;
+            height: 50px;
+            margin-top: 34px;
+            line-height: 50px;
+            float: left;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            background: $def-link-color;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .pwd-success {
+        padding: 118px 302px;
+        text-align: center;
+        h3 {
+            font-size: 28px;
+            color: $def-link-color;
+            font-weight: $font-weight;
+            .i-r-success {
+                margin-right: 25px;
+            }
+        }
+        .user-btn-long {
+            margin-top: 122px;
+            @extend %dib;
+            width: 359px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            background: $def-link-color;
+        }
+    }
+}
+
+@import "patch";

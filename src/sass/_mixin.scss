@@ -1,0 +1,45 @@
+@mixin opacity($opa) {
+  opacity:$opa;
+  filter:alpha(opacity=$opa * 100);
+}
+
+@mixin transform($transform) {
+  -webkit-transform:$transform; -moz-transform:$transform; -ms-transform:$transform; -o-transform:$transform; transform:$transform;
+}
+
+@mixin transition($transition) {
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  transition:$transition;
+}
+
+@mixin origin($origin) {
+  -webkit-transform-origin:$origin;
+  -moz-transform-origin:$origin;
+  -ms-transform-origin:$origin;
+  -o-transform-origin:$origin;
+  transform-origin:$origin;
+}
+
+@mixin borderRadius($radius) {
+  -webkit-border-radius:$radius; -moz-border-radius:$radius; border-radius:$radius;
+}
+
+@mixin boxShadow($str) {
+  -webkit-box-shadow:$str;
+  -moz-box-shadow:$str;
+  box-shadow:$str;
+}
+
+@mixin linearGradient($angle, $start, $end){
+  background:linear-gradient($angle, $start 0%, $end 100%);
+  background:-webkit-linear-gradient($angle, $start 0%, $end 100%);
+}
+
+@mixin webkitBoxLine($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
