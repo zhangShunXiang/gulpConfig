@@ -1,10 +1,10 @@
 
 因为需要的依赖包很大，建议用yarn进行依赖包下载，用npm经常中途会卡死:
 
-##### yarn安装：
+###### yarn安装：
 `npm install yarn`
 
-##### 用yarn 安装依赖包：
+###### 用yarn 安装依赖包：
 `yarn install`
 
 
